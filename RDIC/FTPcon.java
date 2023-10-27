@@ -17,7 +17,7 @@ public class FTPcon {
     public boolean upload(File file) {
         try {
             client.connect("ftp.drivehq.com");
-            client.login("UGproject", "project2023");
+            client.login("username", "password");
             client.enterLocalPassiveMode();
             fis = new FileInputStream(file);
             status = client.storeFile(" /UGP/" + file.getName(), fis);
